@@ -15,7 +15,7 @@ anime_url = "?f=0&c=0_0&q=starlight+revue+1080p&s=id&o=asc"
 
 
 def seriesPlus(): #dummy command/function
-    print("KUROKO ASSKET")
+    print("Test")
 
 def fileRetrieval(url): #dummy file retrieval, might not need anymore
     testfile=urllib.request.URLopener()
@@ -93,10 +93,7 @@ def searchAnime(title, subber, resolution):
         return
     page_html = uClient.read()  # html of the page from URL is saved in this variable
     uClient.close()  # close the connection to web to save process
-
-
-
-
+    
 
     searchWindow = Toplevel(height=50, width=100)
     results = Listbox(searchWindow, selectmode=MULTIPLE, height=15, width=50)
@@ -128,16 +125,7 @@ def searchAnime(title, subber, resolution):
     searchScroll.pack(side=RIGHT, fill=Y)
 
     results.pack()
-
-
-
-
-
-
-
-
-
-
+    
 
 root.title("AniTracker")
 
@@ -155,15 +143,10 @@ label_2.pack()
 entry_2.pack() #subber name
 
 
-
-
-
-
 resolutionVar = IntVar()
 Radiobutton(root, text="480p", value=1, variable=resolutionVar).pack()
 Radiobutton(root, text="720p", value=2, variable=resolutionVar).pack()
 Radiobutton(root, text="1080p",value=3, variable=resolutionVar).pack()
-
 
 
 toolbar = Frame(root)
